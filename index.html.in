@@ -85,13 +85,13 @@
                       <div>
                           <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="Apertium Box" class="apertiumBox">
                           <span class="apertiumSubLogo"></span>
-                          <span class="apertiumLogo" id="apertiumLogo">Apertium</span>
+                          <span class="apertiumLogo">Apertium</span>
                       </div>
                       <p data-text="tagline" class="tagline"></p>
                   </div>
                   <div id="localeSelectContainer" class="pull-right hidden-xs">
                       <!-- <i class="icon-globe localeGlobe pull-right"></i> -->
-                      <i class="fa fa-globe fa-2x fa-inverse pull-right localeGlobe" id="localeGlobeIcon"></i>
+                      <i class="fa fa-globe fa-2x fa-inverse pull-right localeGlobe"></i>
                       <select class="localeSelect pull-right"><option> </option></select>
                   </div>
                   <ul class="nav navbar-nav navbar-right collapse navbar-collapse">
@@ -368,7 +368,7 @@
               </div>
               <div class="visible-xs">
                   <select class="localeSelect pull-left"><option> </option></select>
-                  <i class="fa fa-globe fa-2x pull-left localeGlobe" id="localeGlobeIconXS"></i>
+                  <i class="fa fa-globe fa-2x pull-left localeGlobe"></i>
                   <!-- <i class="fa fa-globe localeGlobe pull-left"></i> -->
               </div>
           </div>
@@ -396,7 +396,7 @@
                 </div>
             </div>
 
-            <div class="pull-right well well-sm visible-xs helpMessage" id="helpMessageXS">
+            <div class="pull-right well well-sm visible-xs helpMessage">
                 <span data-text="Notice_Mistake">Notice a mistake?</span>
                 <a data-toggle="modal" data-target="#infoModal" data-text="Help_Improve" data-keyboard="true">Help us improve Apertium!</a>
             </div>
@@ -427,12 +427,12 @@
 
                             <div class="col-md-3 text-center">
                                 <a href="http://www.bytemark.co.uk/" target="_blank">
-                                    <img alt="Bytemark" data-src="./img/logo_bytemark.gif"id="byteMarkImg">
+                                    <img alt="Bytemark" data-src="./img/logo_bytemark.gif"id="bytemarkImg">
                                 </a>
                             </div>
                             <div class="col-md-3 text-center">
                                 <a href="http://www.sourceforge.net" target="_blank">
-                                    <img alt="Sourceforge" data-src="./img/sourceforge.png" id="sourceForgeImg">
+                                    <img alt="Sourceforge" data-src="./img/sourceforge.png" id="sourceforgeImg">
                                 </a>
                             </div>
                         </div>

@@ -28,23 +28,6 @@ h2 {
     z-index: 10000;
 }
 
-.chaining {
-    display: none;
-}
-
-.localeGlobe {
-    color: #fff;
-    font-size: 1.8em;
-    padding: 0 5px 0 0;
-}
-
-.localeSelect {
-    font-size: 14px;
-    height: 25px;
-    margin-bottom: 6px;
-    margin-top: 7px;
-}
-
 .nav-pills { /* sass-lint:disable-line class-name-format */
     cursor: pointer;
 }
@@ -68,6 +51,14 @@ html[dir='ltr'] .clearButton {
 
 html[dir='rtl'] .clearButton {
     left: 18px;
+}
+
+.hide {
+    display: none;
+}
+
+.display-inline { /* sass-lint:disable-line class-name-format */
+    display: inline-block !important; /* sass-lint:disable-line no-important */
 }
 
 #backToTop {
@@ -103,99 +94,27 @@ html[dir='rtl'] .clearButton {
     padding-bottom: 10px;
 }
 
-#apertiumLogo {
-    margin-bottom: -.25em;
-}
-
-#localeSelectContainer {
-    width: 35%;
-}
-
-#localeGlobeIcon {
-    padding: 5px 5px 0 0;
-}
-
-#srcLangSelect,
-#dstLangSelect {
-    display: inline-block !important; /* sass-lint:disable-line no-important */
-}
-
-#fileDropBackdrop {
-    display: none;
-    z-index: 1000;
-}
-
-#fileDropBackdrop .well {
-    left: 35%;
-    position: absolute;
-    text-align: center;
-    top: 35%;
-}
-
-#fileDropBackdrop h1 {
-    font-weight: bold;
-}
-
-#fileDropMask {
-    opacity: 0;
-    z-index: 10000;
-}
-
-.hide {
-    display: none;
-}
-
-#uploadProgress {
-    margin-bottom: 0;
-}
-
-#uploadContainer {
-    margin-top: 1em;
-    min-height: 50px;
-}
-
-#fileLoading {
-    left: 50%;
-    position: absolute;
-    top: 50%;
-}
-
-#fileUploadProgress {
-    width: 0%;
-}
-
-#morphAnalyzerOutput {
-    border-spacing: 0;
-}
-
-#localeGlobeIconXS {
-    padding: 5px 0 0 5px;
-}
-
-.display-inline { /* sass-lint:disable-line class-name-format */
-    display: inline-block !important; /* sass-lint:disable-line no-important */
-}
-
-#helpMessageXS {
+.helpMessage.visible-xs { /* sass-lint:disable-line class-name-format */
     margin-top: 10px;
-}
-
-#maintainer {
-    padding-bottom: 2em;
-}
-
-#byteMarkImg {
-    margin-top: .5em;
-    width: 100%;
-}
-
-#sourceForgeImg {
-    margin-top: .25em;
-    width: 100%;
 }
 
 .helpMessage {
     cursor: pointer;
+}
+
+#apertiumImgContainer {
+    margin-bottom: 1.5em;
+}
+
+#apertiumImgContainer img {
+    height: 5em;
+    max-width: 100%;
+}
+
+/* About */
+
+#maintainer {
+    padding-bottom: 2em;
 }
 
 #gsocImg {
@@ -207,17 +126,45 @@ html[dir='rtl'] .clearButton {
     padding-left: .5em;
 }
 
+#bytemarkImg {
+    margin-top: .5em;
+    width: 100%;
+}
+
+#sourceforgeImg {
+    margin-top: .25em;
+    width: 100%;
+}
+
 .licenseCol {
     margin: 0 .5em;
 }
 
-#apertiumImgContainer {
-    margin-bottom: 1.5em;
+/* Localization Controls */
+
+#localeSelectContainer {
+    width: 35%;
 }
 
-#apertiumImgContainer img{
-    height: 5em;
-    max-width: 100%;
+.hidden-xs .localeGlobe { /* sass-lint:disable-line class-name-format */
+    padding: 5px 5px 0 0;
+}
+
+.visible-xs .localeGlobe { /* sass-lint:disable-line class-name-format */
+    padding: 5px 5px 0 0;
+}
+
+.localeGlobe {
+    color: #fff;
+    font-size: 1.8em;
+    padding: 0 5px 0 0;
+}
+
+.localeSelect {
+    font-size: 14px;
+    height: 25px;
+    margin-bottom: 6px;
+    margin-top: 7px;
 }
 
 /* Navbar */
@@ -251,6 +198,7 @@ html[dir='rtl'] .clearButton {
 .apertiumLogo {
     color: #808080;
     font-size: 2.25em;
+    margin-bottom: -.25em;
     top: .7em;
 }
 
@@ -369,14 +317,19 @@ html[dir='rtl'] #srcLanguages {
     resize: vertical;
 }
 
+#srcLangSelectors {
+    padding-left: 0;
+}
+
+#srcLangSelect,
+#dstLangSelect {
+    display: inline-block !important; /* sass-lint:disable-line no-important */
+}
+
 @media(max-width: 768px) {
     #originalText {
         margin-bottom: 1em;
     }
-}
-
-#srcLangSelectors {
-    padding-left: 0;
 }
 
 @media(min-width: 768px) {
@@ -432,10 +385,58 @@ html[dir='rtl'] #srcLanguages {
     margin-top: 1em;
 }
 
+#fileDropBackdrop {
+    display: none;
+    z-index: 1000;
+}
+
+#fileDropBackdrop .well {
+    left: 35%;
+    position: absolute;
+    text-align: center;
+    top: 35%;
+}
+
+#fileDropBackdrop h1 {
+    font-weight: bold;
+}
+
+#fileDropMask {
+    opacity: 0;
+    z-index: 10000;
+}
+
+#uploadProgress {
+    margin-bottom: 0;
+}
+
+#uploadContainer {
+    margin-top: 1em;
+    min-height: 50px;
+}
+
+#fileLoading {
+    left: 50%;
+    position: absolute;
+    top: 50%;
+}
+
+#fileUploadProgress {
+    width: 0%;
+}
+
+.chaining {
+    display: none;
+}
+
 /* Analysis */
 
 .unit {
     margin-left: 30px;
+}
+
+#morphAnalyzerOutput {
+    border-spacing: 0;
 }
 
 /* No JS Banner */
@@ -464,7 +465,6 @@ body {
     height: 100%; /* The html and body elements cannot have any padding or margin. */
 }
 
-
 /* Wrapper for page content to push down footer */
 
 #wrap {
@@ -480,7 +480,6 @@ body {
 #footer {
     height: auto;
 }
-
 
 /* Lastly, apply responsive CSS fixes as necessary */
 
